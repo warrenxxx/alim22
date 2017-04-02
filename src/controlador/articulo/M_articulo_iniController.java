@@ -19,10 +19,13 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
@@ -49,6 +52,7 @@ public class M_articulo_iniController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ini();
+        
     }
 
     public void insertar(ActionEvent e) {
@@ -64,6 +68,7 @@ public class M_articulo_iniController implements Initializable {
     }
 
     public void ini() {           
+        
         tnombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         tcodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         tid.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -125,6 +130,7 @@ public class M_articulo_iniController implements Initializable {
         String lowerCaseFilterString = filterString.toLowerCase();
 
         if (x.getNombre().toLowerCase().indexOf(lowerCaseFilterString) != -1) return true; else
+        if (x.getCodigo().toLowerCase().indexOf(lowerCaseFilterString) != -1) return true; else
         if (x.getCategoria().toLowerCase().indexOf(lowerCaseFilterString) != -1) return true;
       
         return false; // Does not match

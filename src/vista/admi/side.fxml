@@ -22,8 +22,8 @@
                             <content>
                                 <VBox>
                                     <children>
-                                        <Button defaultButton="true" mnemonicParsing="false" onAction="#m_productos" prefHeight="17.0" prefWidth="117.0" text="Productos" />
-                                        <Button defaultButton="true" mnemonicParsing="false" onAction="#m_categoria" prefHeight="27.0" prefWidth="117.0" text="Categoria" />
+                                        <Button mnemonicParsing="false" onAction="#m_productos" prefHeight="17.0" prefWidth="117.0" text="Productos" />
+                                        <Button mnemonicParsing="false" onAction="#m_categoria" prefHeight="27.0" prefWidth="117.0" text="Categoria" />
                                     </children>
                                 </VBox>
                             </content>
@@ -37,7 +37,7 @@
                            <children>
                               <TitledPane animated="false" collapsible="false" expanded="false">
                                  <graphic>
-                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#compras" prefHeight="37.0" prefWidth="122.0">
+                                    <Button mnemonicParsing="false" onAction="#compras" prefHeight="37.0" prefWidth="122.0">
                                        <graphic>
                                           <Label text="Entrada">
                                              <graphic>
@@ -54,7 +54,7 @@
                               </TitledPane>
                               <TitledPane animated="false" collapsible="false" expanded="false">
                                  <graphic>
-                                    <Button defaultButton="true" mnemonicParsing="false" onAction="#ventas" prefHeight="37.0" prefWidth="122.0">
+                                    <Button mnemonicParsing="false" onAction="#ventas" prefHeight="37.0" prefWidth="122.0">
                                        <graphic>
                                           <Label text="Ventas">
                                              <graphic>

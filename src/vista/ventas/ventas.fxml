@@ -96,7 +96,6 @@
                                                     </font>
                                                 </Label>
                                     <TextField fx:id="barras" promptText="buscar" />
-                                    <TextField fx:id="barras2" />
                                             </children>
                                         </HBox>
                                         <HBox prefHeight="16.0" prefWidth="308.0">

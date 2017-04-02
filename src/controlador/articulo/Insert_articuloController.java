@@ -20,6 +20,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -91,6 +92,24 @@ public class Insert_articuloController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        codigo.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                ArrayList x=new CArticulo().listar("codigo_barras", newValue);
+                if(x.size()>0){
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Error");
+                        alert.setHeaderText("Duplicado");
+                        alert.setContentText("Este producto ya existe en su inventario");
+                        alert.showAndWait();
+                        alert.showAndWait();
+                        codigo.setText(oldValue);
+                        
+                }
+                          
+            }
+
+        });
         new_asignar.setId("");
         ArrayList<CCategoria> cat = new CCategoria().listar();
         ObservableList<CCategoria> obs = FXCollections.observableArrayList(cat);
